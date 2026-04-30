@@ -792,15 +792,15 @@
 <header>
   <div class="logo">
     <span class="logo-dot"></span>
-    Compliance Quickscan
+    Quickscan AI & Data project
   </div>
-  <div class="badge">AI/Data/Automatisering</div>
+  <div class="badge">AI & Data</div>
 </header>
 
 <!-- INTRO SCREEN -->
 <div id="screen-intro" class="screen active">
-  <div class="eyebrow">Compliance Quickscan</div>
-  <h1>Bepaal uw <em>compliance</em><br>verplichtingen in minuten</h1>
+  <div class="eyebrow">Quickscan</div>
+  <h1>Check of uw<em>AI / Data project</em><br>onderheving is aan AI en data regelgeving</h1>
   <p class="hero-sub">Beantwoord gerichte vragen over uw AI- of dataproject. De tool bepaalt automatisch welke regelgeving van toepassing is, welke risico's aanwezig zijn en welke acties prioriteit hebben. Dit is geen advies, maar uitsluitend een geautomatiseerde, indicatieve eerste beoordeling.</p>
 
   <div class="meta-row">
@@ -819,15 +819,15 @@
   </div>
 
   <button class="btn-primary" onclick="startScan()">
-    Start de quickscan
+    Start de Quickscan
     <span class="arrow">→</span>
   </button>
 
   <div class="coverage-row">
     <div class="coverage-label">Gedekte regelgeving</div>
     <div class="tags">
-      <span class="tag">EU AI Act</span>
-      <span class="tag">AVG / GDPR</span>
+      <span class="tag">AI Act</span>
+      <span class="tag">AVG</span>
       <span class="tag">Data Act</span>
       <span class="tag">Data Governance Act</span>
       <span class="tag">MDR</span>
@@ -869,7 +869,7 @@
 <div id="screen-email" class="screen">
   <div class="email-icon">📋</div>
   <div class="email-gate-title">Uw rapport is <em>gereed</em></div>
-  <p class="email-gate-sub">Vul uw gegevens in om uw persoonlijk compliance-rapport te ontvangen.</p>
+  <p class="email-gate-sub">Vul uw gegevens in om uw persoonlijk Quickscan rapport te ontvangen.</p>
 
   <div class="email-field-wrap">
     <input type="text" id="user-name" class="name-input" placeholder="Uw naam" />
@@ -877,7 +877,7 @@
     <input type="email" id="user-email" class="email-input" placeholder="uw@emailadres.nl" oninput="clearEmailError()" />
     <div class="email-error" id="email-error">Voer een geldig e-mailadres in.</div>
     <button class="btn-email-submit" id="btn-submit-email" onclick="submitEmail()">
-      Bekijk mijn compliance-rapport →
+      Bekijk het Quickscan rapport →
     </button>
   </div>
 
@@ -963,8 +963,8 @@
 // ═══════════════════════════════════════════════════════════════
 const MODULES = {
   m0:  'Module 0 — Algemeen Projectprofiel',
-  m1:  'Module 1 — EU AI Act',
-  m2:  'Module 2 — AVG / GDPR',
+  m1:  'Module 1 — AI Act',
+  m2:  'Module 2 — AVG',
   m3:  'Module 3 — Data Act',
   m4:  'Module 4 — Data Governance Act',
   m5:  'Module 5 — Medical Device Regulation',
@@ -1381,7 +1381,7 @@ const questions = [
   },
   {
     id: 'v3_3', step: 'm3',
-    text: 'Worden data die door uw klanten of gebruikers zijn gegenereerd, gedeeld met of doorverkocht aan derden?',
+    text: 'Wordt data die door uw klanten of gebruikers zijn gegenereerd, gedeeld met of doorverkocht aan derden?',
     hint: '',
     type: 'single',
     skipIf: (ans) => !module3Active(ans),
@@ -1501,7 +1501,7 @@ const questions = [
   // ══════════════════════════════════════════════
   {
     id: 'v6_1', step: 'm6',
-    text: 'In welke sector opereert uw organisatie (verificatie voor NIS2-scope)?',
+    text: 'In welke sector opereert uw organisatie?',
     hint: 'De NIS2-richtlijn verplicht organisaties in bepaalde sectoren om hun digitale beveiliging op orde te hebben en datalekken of cyberincidenten te melden.',
     type: 'single',
     skipIf: (ans) => !module6Active(ans),
